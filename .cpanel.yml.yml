@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/user/J/ChainGangPhp/
+ - export DEPLOYPATH=/home/cfranken/public_html
  - /bin/cp index.html $DEPLOYPATH
