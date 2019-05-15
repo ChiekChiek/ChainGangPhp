@@ -5,7 +5,7 @@
     <title>BicycleGang</title>
 </head>
 <body>
-    <p>De chaingang website van</p><br>
-    <p>Jairo, Teun, Mart, Chico</p>
+<p>De chaingang website van</p><br>
+<p>Jairo, Teun, Mart, Chico</p>
 </body>
 </html>
