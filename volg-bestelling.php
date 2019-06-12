@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: J
  * Date: 6-6-2019
- * Time: 17:03
+ * Time: 17:04
  */
 ?>
 <!DOCTYPE html>
@@ -47,53 +47,32 @@ include("header.php");
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Volg Bestelling</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="volg-bestelling.php">Volg Bestelling</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
+<!--================ Volg Besteling =================-->
+<section class="tracking_box_area section_gap">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
-                    </div>
+        <div class="tracking_box_inner">
+            <p>Om uw bestelling te volgen, voert u uw bestellings-ID in het onderstaande vak in en drukt u op de knop "Volg bestelling". Dit is aan u gegeven op uw ontvangstbewijs en in de bevestigings-e-mail die u had moeten ontvangen.</p>
+            <form class="row tracking_form" action="#" method="post" novalidate="novalidate">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" id="order" name="order" placeholder="Order ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Order ID'">
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
-                            </div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
-                        </div>
-                    </form>
+                <div class="col-md-12 form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mailadres voor facturering" onfocus="this.placeholder = ''" onblur="this.placeholder = '\n'+'E-mailadres voor facturering'">
                 </div>
-            </div>
+                <div class="col-md-12 form-group">
+                    <button type="submit" value="submit" class="primary-btn">Volg bestelling</button>
+                </div>
+            </form>
         </div>
     </div>
 </section>
@@ -188,6 +167,7 @@ include("header.php");
         </div>
     </div>
 </footer>
+
 
 <!-- Scripts -->
 <script src="js/vendor/jquery-2.2.4.min.js"></script>

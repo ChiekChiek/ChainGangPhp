@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: J
  * Date: 6-6-2019
- * Time: 17:03
+ * Time: 17:05
  */
 ?>
 <!DOCTYPE html>
@@ -47,52 +47,142 @@ include("header.php");
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Winkelwagen</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="winkelwagen.php">Winkelwagen</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
+<!--================ Winkelwagen =================-->
+<section class="cart_area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Prijs</th>
+                        <th scope="col">Aantal</th>
+                        <th scope="col">Totaal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img src="img/winkelwagen.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <p>Koga Beachracer Gravel Bike</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
-                        </div>
-                    </form>
-                </div>
+                        </td>
+                        <td>
+                            <h5>€1.799,-</h5>
+                        </td>
+                        <td>
+                            <div class="product_count">
+                                <input type="text" name="qty" id="sst" maxlength="12" value="3" title="Aantal:"
+                                       class="input-text qty">
+                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                        class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                        class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                            </div>
+                        </td>
+                        <td>
+                            <h5>€5.397,-</h5>
+                        </td>
+                    </tr>
+                    <tr class="bottom_button">
+                        <td>
+                            <a class="gray_btn" href="#">Update Winkelwagen</a>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="cupon_text d-flex align-items-center">
+                                <input type="text" placeholder="Vul couponcode in">
+                                <a class="primary-btn" href="#">Toevoegen</a>
+                                <a class="gray_btn" href="#">Sluit</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <h5>Subtotaal</h5>
+                        </td>
+                        <td>
+                            <h5>€5.397,-</h5>
+                        </td>
+                    </tr>
+                    <tr class="shipping_area">
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <h5>Verzenden</h5>
+                        </td>
+                        <td>
+                            <div class="shipping_box">
+                                <ul class="list">
+                                    <li><a href="#">Gratis verzending</a></li>
+                                    <li class="active"><a href="#">Lokale bezorging: €2.00,-</a></li>
+                                </ul>
+                                <h6>Bereken verzending <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                <select class="shipping_select">
+                                    <option value="1">Nederland</option>
+                                    <option value="2">Belgïe</option>
+                                    <option value="4">Duitsland</option>
+                                </select>
+                                <select class="shipping_select">
+                                    <option value="1">Selecteer een provincie</option>
+                                    <option value="2">Selecteer een provincie</option>
+                                    <option value="4">Selecteer een provincie</option>
+                                </select>
+                                <input type="text" placeholder="Postcode/Zipcode">
+                                <a class="gray_btn" href="#">Update Details</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="out_button_area">
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="checkout_btn_inner d-flex align-items-center">
+                                <a class="gray_btn" href="winkel.html">Verder winkelen</a>
+                                <a class="primary-btn" href="checkout.html">Ga naar de kassa</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -205,5 +295,4 @@ include("header.php");
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>

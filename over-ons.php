@@ -47,56 +47,57 @@ include("header.php");
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Over Ons</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="over-ons.php">Over Ons</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
-                    </div>
+<!-- Teamleden -->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="https://www.akatekst.nl/upload/images/portfolio-opdrachtgevers/logo%20anoniem.JPG" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Jairo Ramdas</h5>
+                    <div class="card-text text-black-50">Web Developer</div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
-                            </div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
-                        </div>
-                    </form>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="https://www.akatekst.nl/upload/images/portfolio-opdrachtgevers/logo%20anoniem.JPG" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Chico Franken</h5>
+                    <div class="card-text text-black-50">Web Developer</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="https://www.akatekst.nl/upload/images/portfolio-opdrachtgevers/logo%20anoniem.JPG" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Mart Middelkoop</h5>
+                    <div class="card-text text-black-50">Web Developer</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+                <img src="https://www.akatekst.nl/upload/images/portfolio-opdrachtgevers/logo%20anoniem.JPG" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Teun te Brake</h5>
+                    <div class="card-text text-black-50">Web Developer</div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <!-- Footer -->
 <footer class="footer-area section_gap">
@@ -205,5 +206,4 @@ include("header.php");
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>

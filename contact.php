@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: J
  * Date: 6-6-2019
- * Time: 17:03
+ * Time: 17:05
  */
 ?>
 <!DOCTYPE html>
@@ -47,52 +47,64 @@ include("header.php");
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Contact Us</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="contact.php">Contact</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
+<!--================ Contact =================-->
+<section class="contact_area section_gap_bottom">
     <div class="container">
+        <div id="mapBox" class="mapBox" data-lat="51.944431599999994" data-lon="6.333603699999999" data-zoom="13" data-info="Doetinchem, Gelderland, Nederland."
+             data-mlat="51.944431599999994" data-mlon="6.333603699999999">
+        </div>
         <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
+            <div class="col-lg-3">
+                <div class="contact_info">
+                    <div class="info_item">
+                        <i class="lnr lnr-home"></i>
+                        <h6>Gelderland, Nederland</h6>
+                        <p>Doetinchem</p>
+                    </div>
+                    <div class="info_item">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h6><a href="#">00 (316) 9731 792</a></h6>
+                        <p>Ma t/m vrij 9.00-18.00 uur</p>
+                    </div>
+                    <div class="info_item">
+                        <i class="lnr lnr-envelope"></i>
+                        <h6><a href="#">support@f-bikes.com</a></h6>
+                        <p>Stuur ons op elk gewenst moment uw vraag!</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
+            <div class="col-lg-9">
+                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="naam" name="naam" placeholder="Uw naam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Uw naam'">
                         </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
                         </div>
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="onderwerp" name="onderwerp" placeholder="Onderwerp" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Onderwerp'">
                         </div>
-                        <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea class="form-control" name="bericht" id="bericht" rows="1" placeholder="Bericht" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bericht'"></textarea>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" value="submit" class="primary-btn">Bericht versturen</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -189,6 +201,37 @@ include("header.php");
     </div>
 </footer>
 
+<!--================ Contact Success & Error Bericht =================-->
+<div id="success" class="modal modal-message fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Bedankt</h2>
+                <p>Uw bericht is succesvol verzonden...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error -->
+<div id="error" class="modal modal-message fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Sorry !</h2>
+                <p> Er is iets fout gegaan </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Scripts -->
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
@@ -205,5 +248,4 @@ include("header.php");
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>

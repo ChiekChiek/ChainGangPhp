@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: J
  * Date: 6-6-2019
- * Time: 17:03
+ * Time: 17:05
  */
 ?>
 <!DOCTYPE html>
@@ -47,51 +47,159 @@ include("header.php");
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Checkout</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="winkelwagen.php">Winkelwagen<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="checkout.php">Checkout</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
+<!--================ Checkout =================-->
+<section class="checkout_area section_gap">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
-                    </div>
-                </div>
+        <div class="returning_customer">
+            <div class="check_title">
+                <h2>Terugkomende klant? <a href="#panelli">Klik hier om in te loggen</a></h2>
             </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
+            <p>Als u al eerder met ons hebt gewinkeld, vul dan hieronder uw gegevens in. Als u een nieuwe klant bent, gaat u naar het gedeelte Facturering en verzending.</p>
+            <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                <div class="col-md-6 form-group p_star">
+                    <input type="text" id="panelli" class="form-control" id="name" name="name">
+                    <span class="placeholder" data-placeholder="Email"></span>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    <input type="password" class="form-control" id="password" name="password">
+                    <span class="placeholder" data-placeholder="Wachtwoord"></span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <button type="submit" value="submit" class="primary-btn">login</button>
+                    <div class="creat_account">
+                        <input type="checkbox" id="f-option" name="selector">
+                        <label for="f-option">Onthoud mij</label>
+                    </div>
+                    <a class="lost_pass" href="#">Wachtwoord vergeten?</a>
+                </div>
+            </form>
+        </div>
+        <div class="cupon_area">
+            <div class="check_title">
+                <h2>Heb je een waardebon? <a href="#panelcp">Klik hier om uw code in te voeren</a></h2>
+            </div>
+            <input type="text" id="panelcp" placeholder="Vul couponcode in">
+            <a class="tp_btn" href="#">Pas Coupon toe</a>
+        </div>
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Billing Details</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="first" name="name">
+                            <span class="placeholder" data-placeholder="Voornaam"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="last" name="name">
+                            <span class="placeholder" data-placeholder="Achternaam"></span>
                         </div>
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Bedrijfsnaam">
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="telnummer" name="telnummer">
+                            <span class="placeholder" data-placeholder="Telefoonnummer"></span>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="email" name="compemailany">
+                            <span class="placeholder" data-placeholder="E-mailadres"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select">
+                                <option value="1">Nederland</option>
+                                <option value="2">Belgïe</option>
+                                <option value="4">Duitsland</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="add1" name="add1">
+                            <span class="placeholder" data-placeholder="Adresregel 1"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="add2" name="add2">
+                            <span class="placeholder" data-placeholder="Adresregel 2"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="city" name="city">
+                            <span class="placeholder" data-placeholder="Plaats/stad"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select">
+                                <option value="1">Wijk</option>
+                                <option value="2">Wijk</option>
+                                <option value="4">Wijk</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
                         </div>
                         <div class="col-md-12 form-group">
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
+                                <label for="f-option2">Account aanmaken?</label>
                             </div>
                         </div>
                         <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
+                            <div class="creat_account">
+                                <h3>Verzendgegevens</h3>
+                                <input type="checkbox" id="f-option3" name="selector">
+                                <label for="f-option3">Verzend naar een ander adres?</label>
+                            </div>
+                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Bestel notities"></textarea>
                         </div>
                     </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Jouw bestelling</h2>
+                        <ul class="list">
+                            <li><a href="#">Product <span>Totaal</span></a></li>
+                            <li><a href="#">Koga Beachracer G.B. <span class="middle">x3</span> <span class="last">€5.397,-</span></a></li>
+                        </ul>
+                        <ul class="list list_2">
+                            <li><a href="#">Subtotaal <span>€5.397,-</span></a></li>
+                            <li><a href="#">Verzend kosten <span>Lokale bezorging: €2.00,-</span></a></li>
+                            <li><a href="#">Totaal <span>€5.399,-</span></a></li>
+                        </ul>
+                        <!--
+                        <div class="payment_item">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option5" name="selector">
+                                <label for="f-option5">Cheque betalingen</label>
+                                <div class="check"></div>
+                            </div>
+                            <p>Stuur een cheque naar winkelnaam, winkelstraat, winkelstad, winkelstaat / provincie, winkelnummer.</p>
+                        </div>
+                        -->
+                        <div class="payment_item active">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option6" name="selector">
+                                <label for="f-option6">Paypal </label>
+                                <img src="img/product/card.jpg" alt="">
+                                <div class="check"></div>
+                            </div>
+                            <p>Betaal via PayPal; u kunt met uw creditcard betalen als u geen PayPal-account hebt.</p>
+                        </div>
+                        <div class="creat_account">
+                            <input type="checkbox" id="f-option4" name="selector">
+                            <label for="f-option4">Ik heb de </label>
+                            <a href="#">algemene voorwaarden*</a>
+                            <label for="f-option4">gelezen en ga hiermee akkoord</label>
+                        </div>
+                        <a class="primary-btn" href="bevestiging.html">Ga naar Paypal</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,5 +313,4 @@ include("header.php");
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: J
  * Date: 6-6-2019
- * Time: 17:03
+ * Time: 17:06
  */
 ?>
 <!DOCTYPE html>
@@ -42,57 +42,120 @@
 include("header.php");
 ?>
 
-<!-- Banner -->
+<!-- Banner-->
 <section class="banner-area organic-breadcrumb">
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Login/Register</h1>
+                <h1>Bevestiging</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="login.php">Login/Registreer</a>
+                    <a href="winkelwagen.php">Winkelwagen<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="checkout.php">Checkout<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="Bevestiging.php">Bevestiging</a>
                 </nav>
             </div>
         </div>
     </div>
 </section>
 
-<!--================ LoginBox =================-->
-<section class="login_box_area section_gap">
+<!--================ Bestel Details =================-->
+<section class="order_details section_gap">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="login_box_img">
-                    <img class="img-fluid" src="img/login.jpg" alt="">
-                    <div class="hover">
-                        <h4>Nieuw op onze website?</h4>
-                        <p>Als u zich registreert voor deze site, krijgt u toegang tot de status en geschiedenis van uw bestelling. Vul de onderstaande velden in en we maken snel een nieuw account voor je klaar. We zullen u alleen om informatie vragen die nodig is om het aankoopproces sneller en gemakkelijker te maken.</p>
-                        <a class="primary-btn" href="registreer.html">Account aanmaken</a>
-                    </div>
+        <h3 class="title_confirmation">Dank je. Uw bestelling is ontvangen.</h3>
+        <div class="row order_d_inner">
+            <div class="col-lg-4">
+                <div class="details_item">
+                    <h4>Bestel Info</h4>
+                    <ul class="list">
+                        <li><a href="#"><span>Bestellingsnummer</span> : 60235</a></li>
+                        <li><a href="#"><span>Datum</span> : Los Angeles</a></li>
+                        <li><a href="#"><span>Totaal</span> : EUR 5.399</a></li>
+                        <li><a href="#"><span>Betalingsmiddel</span> : Paypal</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="login_form_inner">
-                    <h3>Inloggen</h3>
-                    <form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'">
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <div class="creat_account">
-                                <input type="checkbox" id="f-option2" name="selector">
-                                <label for="f-option2">Ingelogd blijven</label>
-                            </div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Inloggen</button>
-                            <a href="#">Wachtwoord vergeten?</a>
-                        </div>
-                    </form>
+            <div class="col-lg-4">
+                <div class="details_item">
+                    <h4>Facturatie adres</h4>
+                    <ul class="list">
+                        <li><a href="#"><span>Straat</span> : 56/8</a></li>
+                        <li><a href="#"><span>Stad</span> : Doetinchem</a></li>
+                        <li><a href="#"><span>Land</span> : Nederland</a></li>
+                        <li><a href="#"><span>Postcode </span> : 36952</a></li>
+                    </ul>
                 </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="details_item">
+                    <h4>Verzendingsadres</h4>
+                    <ul class="list">
+                        <li><a href="#"><span>Straat</span> : 56/8</a></li>
+                        <li><a href="#"><span>Stad</span> : Doetinchem</a></li>
+                        <li><a href="#"><span>Land</span> : Nederland</a></li>
+                        <li><a href="#"><span>Postcode </span> : 36952</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="order_details_table">
+            <h2>Order Details</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <p>Koga Beachracer Gravel Bike</p>
+                        </td>
+                        <td>
+                            <h5>x 3</h5>
+                        </td>
+                        <td>
+                            <p>€5.397,-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Subtotaal</h4>
+                        </td>
+                        <td>
+                            <h5></h5>
+                        </td>
+                        <td>
+                            <p>€5.397,-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>VERZEND KOSTEN</h4>
+                        </td>
+                        <td>
+                            <h5></h5>
+                        </td>
+                        <td>
+                            <p>Lokale Bezorging: €2.00,-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Totaal</h4>
+                        </td>
+                        <td>
+                            <h5></h5>
+                        </td>
+                        <td>
+                            <p>€5.399,-</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -205,5 +268,4 @@ include("header.php");
 <script src="js/gmaps.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>
