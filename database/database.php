@@ -9,7 +9,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "123";
-$dbname = "f-bikes-database";
+$dbname = "cfranken_f-bikes-database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
